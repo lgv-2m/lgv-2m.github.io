@@ -1,1 +1,1 @@
-Sitemap: /lgv-2m/sitemap.xml
+Sitemap: http://localhost:4000/lgv-2m/sitemap.xml
