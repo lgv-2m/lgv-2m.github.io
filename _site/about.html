@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 
-<header class="site-header " role="banner">
+<header class="site-header site-header-transparent" role="banner">
 
   <div class="wrapper">
     <div class="site-header-inner">
@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
           </label>
 
           <div class="trigger">
-<a class="page-link" href="/lgv-2m/about.html">Mon Projet</a><a class="page-link" href="/lgv-2m/archives.html">Blog</a><a class="page-link" href="/lgv-2m/">Home</a>
+<a class="page-link" href="/lgv-2m/">Acceuil</a><a class="page-link" href="/lgv-2m/about.html">Mon Projet</a><a class="page-link" href="/lgv-2m/blog.html">Le Blog</a><a class="page-link" href="/lgv-2m/gazette.html">La Gazette</a><a class="page-link" href="/lgv-2m/cagnotte.html">La Cagnotte</a>
 
 
 
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     var documentElement = document.documentElement;
 
     function storeScrollData() {
-      var y = getScrollPos().y;var scrollStatus = "";
+      var y = getScrollPos().y;documentElement.setAttribute("data-header-transparent", "");var scrollStatus = "";
 
       if (y <= 0) {
         scrollStatus = "top";
@@ -555,7 +555,22 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 
-<script>
+<section class="page-banner">
+    <div class="page-banner-img">
+<div style="background-image: url(/lgv-2m/assets/images/banners/thumbnail_IMG_9203.jpg)"></div>
+        <img class="img-placeholder" src="/lgv-2m/assets/images/banners/thumbnail_IMG_9203.jpg">
+</div>
+    <div class="wrapper">
+      <div class="page-banner-inner"><div class="page-banner-default">
+            <h1 class="page-banner-heading">
+                
+            </h1>
+            <h2 class="page-banner-subheading">
+               
+            </h2>
+          </div></div>
+    </div>
+  </section><script>
   function hashLocate(hashValue) {
     hashValue = hashValue.replace(/^.*#h-/, '');
     hashValue = decodeURIComponent(hashValue);
@@ -622,22 +637,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
         <div class="framework">
   <section class="main">
 
-     <div class="post">
-  <section>
+     <div class="articles">
+  
 
-
-
-
-
-
-
-
-
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <div class="post-content e-content" itemprop="articleBody">
-
-      <h1>About</h1>
+  <h1> Mon Projet </h1>
 
 <p><img class="emoji" title=":art:" alt=":art:" raw="🎨" src="https://github.githubassets.com/images/icons/emoji/unicode/1f3a8.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"> Yet another theme for elegant writers with modern flat style
 and beautiful night mode.
@@ -651,137 +654,75 @@ and posts.
 
 
 
-    </div>
-
-</article>
-<div class="post-comments"></div></section>
+  
 </div>
 
 
   </section>
   <section class="sidebar" style="margin-left: 15px;">
-    <!-- Get sidebar items --><style type="text/css" media="screen">
-.post-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-</style>
+    <!-- Get sidebar items -->
 
-<div class="post-menu">
-  <div class="post-menu-title">TOC</div>
-  <div class="post-menu-content"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="common-list">
+  <ul>
+    <li>
+      <a href="/lgv-2m/index.html">
+        All<span>14</span>
+      </a>
+    </li>
+
+    
+      <li>
+        <a href="/lgv-2m/categories.html#h-example">
+          example <span>4</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/lgv-2m/categories.html#h-jekyll">
+          jekyll <span>1</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/lgv-2m/categories.html#h-junk">
+          junk <span>2</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/lgv-2m/categories.html#h-markdown">
+          markdown <span>5</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/lgv-2m/categories.html#h-misc">
+          misc <span>2</span>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
-<script>
-  function generateContent() {
-    var menu = document.querySelector(".post-menu");
-    var menuContent =  menu.querySelector(".post-menu-content");
-    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
-
-    // Hide menu when no headings
-    if (headings.length === 0) {
-      return menu.style.display = "none";
-    }
-
-    // Generate post menu
-    var menuHTML = '';
-    for (var i = 0; i < headings.length; i++) {
-      var h = headings[i];
-      menuHTML += (
-        '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
-    }
-
-    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
-
-    // The header element
-    var header = document.querySelector('header.site-header');
-
-    function doMenuCollapse(index, over_items) {
-      var items = menuContent.firstChild.children;
-
-      if (over_items == undefined) {
-        over_items = 20;
-      }
-
-      if (items.length < over_items) {
-        return;
-      }
-
-      var activeItem = items[index];
-      var beginItem = activeItem
-      var endItem = activeItem
-      var beginIndex = index;
-      var endIndex = index + 1;
-      while (beginIndex >= 0
-        && !items[beginIndex].classList.contains('h-h2')) {
-        beginIndex -= 1;
-      }
-      while (endIndex < items.length
-        && !items[endIndex].classList.contains('h-h2')) {
-        endIndex += 1;
-      }
-      for (var i = 0; i < beginIndex; i++) {
-        item = items[i]
-        if (!item.classList.contains('h-h2')) {
-          item.style.display = 'none';
-        }
-      }
-      for (var i = beginIndex + 1; i < endIndex; i++) {
-        item = items[i]
-        // if (!item.classList.contains('h-h2')) {
-          item.style.display = '';
-        // }
-      }
-      for (var i = endIndex; i < items.length; i++) {
-        item = items[i]
-        if (!item.classList.contains('h-h2')) {
-          item.style.display = 'none';
-        }
-      }
-    }
-
-    // Init menu collapsed
-    doMenuCollapse(-1);
-
-    // Active the menu item
-    window.addEventListener('scroll', function (event) {
-      var lastActive = menuContent.querySelector('.active');
-      var changed = true;
-      var activeIndex = -1;
-      for (var i = headings.length - 1; i >= 0; i--) {
-        var h = headings[i];
-        var headingRect = h.getBoundingClientRect();
-        var headerRect = header.getBoundingClientRect();
-        var headerTop = Math.floor(headerRect.top);
-        var headerHeight = Math.floor(headerRect.height);
-        var headerHeight = headerTop + headerHeight + 20;
-        if (headingRect.top <= headerHeight) {
-          var id = 'h-' + h.getAttribute('id');
-          var a = menuContent.querySelector('a[href="#' + id  + '"]');
-          var curActive = a.parentNode;
-          if (curActive) {
-            curActive.classList.add('active');
-            activeIndex = i;
-          }
-          if (lastActive == curActive) {
-            changed = false;
-          }
-          break;
-        }
-      }
-      if (changed) {
-        if (lastActive) {
-          lastActive.classList.remove('active');
-        }
-        doMenuCollapse(activeIndex);
-      }
-      event.preventDefault();
-    });
-  }
-  generateContent();
-</script>
 </section>
 </div>
 

@@ -60,7 +60,13 @@
 <loc>http://localhost:4000/lgv-2m/about.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/lgv-2m/archives.html</loc>
+<loc>http://localhost:4000/lgv-2m/blog.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/lgv-2m/cagnotte.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/lgv-2m/gazette.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/lgv-2m/</loc>

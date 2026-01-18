@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: PT Sans Narrow;
+  font-family: PT serif Caption;
   font-weight: 400;
   font-size: 21px;
   font-display: swap;
@@ -352,8 +352,8 @@ html[data-scroll-status=top] footer.site-footer .site-footer-inner {
 }
 
 .site-nav {
-  font-size: 25px;
-  font-family: "PT Sans Narrow", sans-serif !important;
+  font-size: 18px;
+  font-family: "PT Sans Caption", sans-serif !important;
   line-height: 95.76px;
   position: absolute;
   right: 0;
@@ -421,7 +421,7 @@ html[data-scroll-status=top] footer.site-footer .site-footer-inner {
 
   .site-title-text {
     font-family: 'Lexend Zetta', sans-serif; 
-    font-size: 3.6rem;               
+    font-size: 3.0rem;               
     font-weight: bold;
   }
 
@@ -469,7 +469,7 @@ html[data-scroll-status=top] footer.site-footer .site-footer-inner {
 }
 @media screen and (max-width: 800px) {
   .post .post-title {
-    font-size: 47.25px;
+    font-size: 27.25px;
   }
 }
 .post .post-tags {
@@ -1600,4 +1600,53 @@ html[data-theme=dark] .click-to-top {
   flex-direction: row;
   align-items: center;
   gap: 10px; /* espace entre titre et tagline */
+}
+
+
+/* Sous-titre : blanc sur image, noir au scroll */
+html[data-header-transparent][data-scroll-status="top"] .site-tagline {
+  color: white;
+}
+
+html:not([data-scroll-status="top"]) .site-tagline {
+  color: black;
+}
+/* Flex desktop / colonne mobile */
+.responsive-flex {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Carte post */
+.latest-post-card {
+  flex: 1;
+}
+
+/* Image du post */
+.latest-post-card .latest-post-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+/* Image côté droit simple */
+.fixed-side-image {
+  flex: 1.5;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0; /* pas de bordure arrondie */
+}
+
+/* Responsive : sur mobile, post au-dessus, image en dessous */
+@media screen and (max-width: 800px) {
+  .responsive-flex {
+    flex-direction: column;
+  }
+  .latest-post-card .latest-post-image,
+  .fixed-side-image {
+    height: 200px;
+  }
 }

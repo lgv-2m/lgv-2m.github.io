@@ -3,37 +3,38 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Home
+title: Acceuil
 banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
 
 ---
-
-<h2 class="home-section-title"> Les dernières nouvelles</h2>
+<h2 class="home-section-title">Les dernières nouvelles</h2>
 
 <section class="home-latest-strip">
-  <div class="latest-strip-inner">
-    {% assign latest_posts = site.posts | sort: "date" | reverse | slice: 0, 3 %}
-    {% for post in latest_posts %}
+  {% assign latest_posts = site.posts | sort: "date" | reverse | slice: 0, 1 %}
+  {% for post in latest_posts %}
 
-      {% assign post_image =
-        post.excerpt_image
-        | default: post.banner.image
-        | default: post.banner
-        | default: "/assets/images/default-image.jpeg"
-      %}
+    {% assign post_image =
+      post.excerpt_image
+      | default: post.banner.image
+      | default: post.banner
+      | default: "/assets/images/default-image.jpeg"
+    %}
 
-      {%- assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
-      {%- assign jour = post.date | date: "%-d" -%}
-      {%- assign mois_index = post.date | date: "%-m" | minus: 1 -%}
-      {%- if jour == "1" -%}
-        {%- assign jour_str = "1er" -%}
-      {%- else -%}
-        {%- assign jour_str = jour -%}
-      {%- endif -%}
+    {%- assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
+    {%- assign jour = post.date | date: "%-d" -%}
+    {%- assign mois_index = post.date | date: "%-m" | minus: 1 -%}
+    {%- if jour == "1" -%}
+      {%- assign jour_str = "1er" -%}
+    {%- else -%}
+      {%- assign jour_str = jour -%}
+    {%- endif -%}
 
+    <div class="latest-strip-inner responsive-flex">
+
+      <!-- Carte du dernier post -->
       <a class="latest-post-card" href="{{ post.url | relative_url }}">
         <div class="latest-post-image"
-             style="background-image:url('{{ post_image | relative_url }}')">
+             style="background-image:url('{{ post_image | relative_url }}');">
         </div>
 
         <div class="latest-post-content">
@@ -44,6 +45,12 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
         </div>
       </a>
 
-    {% endfor %}
-  </div>
+      <!-- Image fixe à côté (juste l'image, pas de bordure) -->
+      <div class="fixed-side-image"
+           style="background-image: url('assets/images/Capture d’écran 2025-12-14 à 13.13.55.png');">
+      </div>
+
+    </div>
+
+  {% endfor %}
 </section>
