@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8dae777b66d1382e89760d8da36ae32c {
+                #map_1998bca92a937f5e0f7f85a33e062a9d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,14 +54,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_8dae777b66d1382e89760d8da36ae32c" ></div>
+            <div class="folium-map" id="map_1998bca92a937f5e0f7f85a33e062a9d" ></div>
         
 </body>
 <script>
     
     
-            var map_8dae777b66d1382e89760d8da36ae32c = L.map(
-                "map_8dae777b66d1382e89760d8da36ae32c",
+            var map_1998bca92a937f5e0f7f85a33e062a9d = L.map(
+                "map_1998bca92a937f5e0f7f85a33e062a9d",
                 {
                     center: [50.0, 50.0],
                     crs: L.CRS.EPSG3857,
@@ -78,15 +78,15 @@
 
         
     
-            var tile_layer_c66d24dab23b10798a2be659ca872de5 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+            var tile_layer_ed45ca39de53f5706a8112fbfd0c4abd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
   "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
   "detectRetina": false,
   "tms": false,
   "opacity": 1,
@@ -95,23 +95,23 @@
             );
         
     
-            tile_layer_c66d24dab23b10798a2be659ca872de5.addTo(map_8dae777b66d1382e89760d8da36ae32c);
+            tile_layer_ed45ca39de53f5706a8112fbfd0c4abd.addTo(map_1998bca92a937f5e0f7f85a33e062a9d);
         
     
-            var poly_line_19ecdb275d72bcf6f8b78c4f652a08b4 = L.polyline(
+            var poly_line_c20d8848c861299ccc6d0518c1443e7d = L.polyline(
                 [[49.1193, 6.1757], [45.8992, 6.1294], [45.4642, 9.19], [48.3069, 14.2858], [44.4268, 26.1025], [41.6771, 26.5555], [41.0082, 28.9784], [39.9334, 32.8597], [40.4093, 49.8671], [43.65, 51.2], [41.2995, 69.2401], [42.8746, 74.5698], [48.0, 79.0], [47.8864, 106.9057]],
                 {"bubblingMouseEvents": true, "color": "#0f5ebe", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#0f5ebe", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_8dae777b66d1382e89760d8da36ae32c);
+            ).addTo(map_1998bca92a937f5e0f7f85a33e062a9d);
         
     
-            var marker_8405971149c293917780e98e6f5d3366 = L.marker(
+            var marker_b1442f52aa2de4e89ed9093d9508c45c = L.marker(
                 [49.1193, 6.1757],
                 {
 }
-            ).addTo(map_8dae777b66d1382e89760d8da36ae32c);
+            ).addTo(map_1998bca92a937f5e0f7f85a33e062a9d);
         
     
-            var icon_033bf219f5ad039333349b02bd1471d7 = L.AwesomeMarkers.icon(
+            var icon_e4ccb4f174b249d3819db1ea44b88756 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "darkblue",
   "iconColor": "white",
@@ -122,44 +122,44 @@
             );
         
     
-        var popup_c4fa108e1259281b4d8e24457063548e = L.popup({
+        var popup_3e82adab6593513c1aee1e6889c3096d = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_26c1749bd57b2612538c4813e2ffe60e = $(`<div id="html_26c1749bd57b2612538c4813e2ffe60e" style="width: 100.0%; height: 100.0%;">Metz — Départ</div>`)[0];
-                popup_c4fa108e1259281b4d8e24457063548e.setContent(html_26c1749bd57b2612538c4813e2ffe60e);
+                var html_25c6d180f42ad064679e944bc2a0a560 = $(`<div id="html_25c6d180f42ad064679e944bc2a0a560" style="width: 100.0%; height: 100.0%;">Metz — Départ</div>`)[0];
+                popup_3e82adab6593513c1aee1e6889c3096d.setContent(html_25c6d180f42ad064679e944bc2a0a560);
             
         
 
-        marker_8405971149c293917780e98e6f5d3366.bindPopup(popup_c4fa108e1259281b4d8e24457063548e)
+        marker_b1442f52aa2de4e89ed9093d9508c45c.bindPopup(popup_3e82adab6593513c1aee1e6889c3096d)
         ;
 
         
     
     
-                marker_8405971149c293917780e98e6f5d3366.setIcon(icon_033bf219f5ad039333349b02bd1471d7);
+                marker_b1442f52aa2de4e89ed9093d9508c45c.setIcon(icon_e4ccb4f174b249d3819db1ea44b88756);
             
     
-            var circle_marker_e17e7fc5895246473515ef060f2fd4cc = L.circleMarker(
+            var circle_marker_df052b01916c0c63291fdad95b60dc56 = L.circleMarker(
                 [47.8864, 106.9057],
-                {"bubblingMouseEvents": true, "color": "#054ea7ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f5ebe", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
-            ).addTo(map_8dae777b66d1382e89760d8da36ae32c);
+                {"bubblingMouseEvents": true, "color": "#0f5ebeff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f5ebe", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1998bca92a937f5e0f7f85a33e062a9d);
         
     
-        var popup_89cfa171326d2a7bfe8ff42a1c406b50 = L.popup({
+        var popup_8b1f3c459224cdb899385dab23bfd854 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_7dd70ee387079166632ec529934d0bb1 = $(`<div id="html_7dd70ee387079166632ec529934d0bb1" style="width: 100.0%; height: 100.0%;">Oulan-Bator</div>`)[0];
-                popup_89cfa171326d2a7bfe8ff42a1c406b50.setContent(html_7dd70ee387079166632ec529934d0bb1);
+                var html_7870bb4264729801f43aa079b341603d = $(`<div id="html_7870bb4264729801f43aa079b341603d" style="width: 100.0%; height: 100.0%;">Oulan-Bator</div>`)[0];
+                popup_8b1f3c459224cdb899385dab23bfd854.setContent(html_7870bb4264729801f43aa079b341603d);
             
         
 
-        circle_marker_e17e7fc5895246473515ef060f2fd4cc.bindPopup(popup_89cfa171326d2a7bfe8ff42a1c406b50)
+        circle_marker_df052b01916c0c63291fdad95b60dc56.bindPopup(popup_8b1f3c459224cdb899385dab23bfd854)
         ;
 
         

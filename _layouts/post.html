@@ -7,93 +7,94 @@ sidebar:
   - article-menu
 ---
 
-<div class="post">
-  <section>
+<article class="w-full px-4 py-12 max-w-3xl mx-auto flex flex-col gap-6">
 
-    {%- assign name = 'banner' -%}
-    {%- include functions.html func='get_value' -%}
-    {%- assign banner = return -%}
+  <!-- Titre principal -->
+  <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-snug">{{ page.title }}</h1>
 
-    {%- assign name = 'hidden' -%}
-    {%- include functions.html func='get_value' -%}
-    {%- assign hidden = return -%}
-
-    {%- assign result = hidden | where_exp: "item", "item == 'header'" -%}
-    {%- if banner == nil and result.size == 0 -%}
-    {%- include views/post-header.html -%}
-    {%- endif -%}
-
-    {%- include views/article.html -%}
-
-    {%- assign result = hidden | where_exp: "item", "item == 'navigator'" -%}
-    {%- if result.size == 0 -%}
-    <div class="post-nav">
-      {%- if page.previous -%}
-        <a class="previous"
-          href="{{ page.previous.url | relative_url }}"
-          title="{{ page.previous.title | escape }}">
-          <div>{{ page.previous.title | escape }}</div>
-        </a>
-      {%- else -%}
-      <span></span>
-      {%- endif -%}
-
-      {%- if page.next -%}
-        <a class="next"
-          href="{{ page.next.url | relative_url }}"
-          title="{{ page.next.title | escape }}">
-          <div>{{ page.next.title | escape }}</div>
-        </a>
-      {%- else -%}
-      <span></span>
-      {%- endif -%}
+  <!-- Image principale -->
+  {% if page.image %}
+    <div class="overflow-hidden rounded-2xl mb-8">
+      <img src="{{ page.image }}" alt="{{ page.title }}" class="w-full h-80 md:h-96 object-cover transition-transform duration-300 hover:scale-105">
     </div>
-    {%- endif -%}
+  {% endif %}
 
-    {%- assign result = hidden | where_exp: "item", "item == 'related_posts'" -%}
-    {%- if result.size == 0 -%}
-    <div class="post-related">
-      <div>Related Articles</div>
-      <ul>
-        {% assign posts = site[page.collection] | sample:4 %}
-        {%- for post in posts -%}
-          {%- assign post_item_class = "" -%}
-          {%- if post.top -%}
-            {%- assign post_item_class = "top-post" -%}
-          {%- endif -%}
-        <li class="{{ post_item_class }}">
-          <a class="post-link"
-            href="{{ post.url | relative_url }}"
-            title="{{ post.title | escape }}">
-            {{ post.title | escape | truncatewords: 12 }}
-            {%- include views/post-badges.html -%}
-          </a>
-        </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-    {%- endif -%}
+  <!-- Contenu Markdown complet -->
+  <div class="prose prose-lg max-w-full text-gray-800">
 
-    {%- assign result = hidden | where_exp: "item", "item == 'comments'" -%}
-    {%- if result.size == 0 -%}
-    <div class="post-comments">
-      {%- if page.comments != false -%}
+    {{ content }}
 
-      {%- if site.disqus.shortname -%}
-      {%- include extensions/comments/disqus.html -%}
-      {%- endif -%}
+  </div>
 
-      {%- if site.gitment.username -%}
-      {%- include extensions/comments/gitment.html -%}
-      {%- endif -%}
+  <!-- Bouton retour vers le blog -->
+  <div class="mt-8">
+    <a href="{{ '/blog/' | relative_url }}" 
+       class="text-blue-600 font-medium underline decoration-blue-300 hover:decoration-blue-500 transition">
+      ← Retour au blog
+    </a>
+  </div>
 
-      {%- if site.utterances.repo -%}
-      {%- include extensions/comments/utterances.html -%}
-      {%- endif -%}
+</article>
 
-      {%- endif -%}
-    </div>
-    {%- endif -%}
+<style>
+/* Harmonisation typographie des titres internes */
+.prose h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
 
-  </section>
-</div>
+.prose h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.prose p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+/* Supprime toutes les décorations/bordures de prose */
+.prose hr,
+.prose blockquote,
+.prose pre,
+.prose code {
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+/* Liens harmonisés */
+.prose a {
+  text-decoration: underline;
+  text-decoration-color: #60a5fa;
+}
+
+.prose img {
+  border-radius: 1rem;       /* coins arrondis */
+  max-width: 100%;           /* ne dépasse jamais le conteneur */
+  height: auto;              /* garde les proportions */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.prose img:hover {
+  transform: scale(1.03);    /* léger zoom au hover */
+}
+
+</style>

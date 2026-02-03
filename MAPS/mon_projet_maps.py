@@ -26,7 +26,6 @@ trajet_coords = [
 carte = folium.Map(
     location=[50, 50],
     zoom_start=3,
-    tiles="CartoDB Positron"  # Fond clair + relief
 )
 
 
@@ -51,7 +50,7 @@ ville, lat, lon = arrivee
 folium.CircleMarker(
     location=[lat, lon],
     radius=8,
-    color="#054ea7ff",
+    color="#0f5ebeff",
     fill=True,
     fill_color="#0f5ebe",
     fill_opacity=1,
