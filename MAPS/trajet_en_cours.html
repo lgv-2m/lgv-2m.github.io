@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f52f83260c892ecaad86e06636cb0b61 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f52f83260c892ecaad86e06636cb0b61" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f52f83260c892ecaad86e06636cb0b61 = L.map(
+                "map_f52f83260c892ecaad86e06636cb0b61",
+                {
+                    center: [50.0, 50.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f34dd9f9ef766994e58709cfac6c1c33 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f34dd9f9ef766994e58709cfac6c1c33.addTo(map_f52f83260c892ecaad86e06636cb0b61);
+        
+    
+            var poly_line_fbf4640b901eec0e493d3c36565e1353 = L.polyline(
+                [[49.1193, 6.1757]],
+                {"bubblingMouseEvents": true, "color": "#0F4C8E", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#0F4C8E", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f52f83260c892ecaad86e06636cb0b61);
+        
+    
+            var poly_line_925996ee5f5028a432a04d9795dbb9b8 = L.polyline(
+                [[49.1193, 6.1757], [45.8992, 6.1294], [45.4642, 9.19], [48.3069, 14.2858], [44.4268, 26.1025], [41.6771, 26.5555], [41.0082, 28.9784], [39.9334, 32.8597], [40.4093, 49.8671], [43.65, 51.2], [41.2995, 69.2401], [42.8746, 74.5698], [48.0, 79.0], [47.8864, 106.9057]],
+                {"bubblingMouseEvents": true, "color": "#3D70A7", "dashArray": "5, 8", "dashOffset": null, "fill": false, "fillColor": "#3D70A7", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f52f83260c892ecaad86e06636cb0b61);
+        
+    
+            var marker_5d7d83c60ac7072d2a376195700a1ac8 = L.marker(
+                [49.1193, 6.1757],
+                {
+}
+            ).addTo(map_f52f83260c892ecaad86e06636cb0b61);
+        
+    
+            var icon_e96c860842805af5133bd4cd302a9f4a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkblue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a46ec07d2f64d105bb1001b7f724d77a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48ed030f4d437f34d5604cc8e140a3d2 = $(`<div id="html_48ed030f4d437f34d5604cc8e140a3d2" style="width: 100.0%; height: 100.0%;">Metz — Départ</div>`)[0];
+                popup_a46ec07d2f64d105bb1001b7f724d77a.setContent(html_48ed030f4d437f34d5604cc8e140a3d2);
+            
+        
+
+        marker_5d7d83c60ac7072d2a376195700a1ac8.bindPopup(popup_a46ec07d2f64d105bb1001b7f724d77a)
+        ;
+
+        
+    
+    
+                marker_5d7d83c60ac7072d2a376195700a1ac8.setIcon(icon_e96c860842805af5133bd4cd302a9f4a);
+            
+    
+            var marker_5542753f8191090f2c78947495b8d71b = L.marker(
+                [49.1193, 6.1757],
+                {
+}
+            ).addTo(map_f52f83260c892ecaad86e06636cb0b61);
+        
+    
+            var div_icon_0b1a1b1830bcdd9a16a3765d89418f12 = L.divIcon({
+  "html": "\n        \u003cdiv style=\"\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 35px;\n            transform: translate(-50%, -50%) scaleX(-1) rotate(5deg);\n            transform-origin: 50% 50%;\n            opacity: 0.9;\n        \"\u003e\n            \ud83d\udeb2\n        \u003c/div\u003e\n        ",
+  "iconSize": [0, 0],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_5542753f8191090f2c78947495b8d71b.setIcon(div_icon_0b1a1b1830bcdd9a16a3765d89418f12);
+            
+    
+            var circle_marker_12dedbdeb1fc58acfd900d98e1c673ca = L.circleMarker(
+                [47.8864, 106.9057],
+                {"bubblingMouseEvents": true, "color": "#0f5ebeff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f5ebe", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_f52f83260c892ecaad86e06636cb0b61);
+        
+    
+        var popup_22286e493a27783c2fb31fe16519da5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_feaefc89f186b417aae2f97f25966254 = $(`<div id="html_feaefc89f186b417aae2f97f25966254" style="width: 100.0%; height: 100.0%;">Oulan-Bator</div>`)[0];
+                popup_22286e493a27783c2fb31fe16519da5e.setContent(html_feaefc89f186b417aae2f97f25966254);
+            
+        
+
+        circle_marker_12dedbdeb1fc58acfd900d98e1c673ca.bindPopup(popup_22286e493a27783c2fb31fe16519da5e)
+        ;
+
+        
+    
+</script>
+</html>
