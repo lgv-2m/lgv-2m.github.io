@@ -355,7 +355,27 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 
-      <nav class="site-nav">
+      <!-- Bouton menu mobile -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn">
+          ☰
+        </button>
+
+        <!-- Overlay -->
+        <div id="mobile-overlay" class="mobile-overlay"></div>
+
+        <!-- Menu mobile -->
+        <nav id="mobile-menu" class="mobile-menu"><a href="/">
+                Accueil
+              </a><a href="/about.html">
+                Mon Projet
+              </a><a href="/blog/">
+                Le Blog
+              </a><a href="/gazette.html">
+                La Pyvazette
+              </a><a href="/cagnotte.html">
+                La Cagnotte
+              </a></nav>
+        <nav class="site-nav">
           <input type="checkbox" id="nav-trigger" class="nav-trigger">
           
 
@@ -381,43 +401,22 @@ document.addEventListener('DOMContentLoaded', function(event) {
     });
   });
   </script>
-
-  <!-- bouton ☰ pour mobile -->
-  <label for="nav-trigger" class="md:hidden cursor-pointer p-2 text-white z-50 relative">
-    ☰
-  </label>
-
-  <!-- menu mobile drawer -->
-  <div class="trigger fixed top-0 right-0 h-full w-64 bg-black bg-opacity-90 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-start p-6 space-y-6 md:static md:flex md:flex-row md:bg-transparent md:translate-x-0 md:p-0 md:space-y-0 md:space-x-4">
-<a class="page-link text-white hover:text-blue-400 w-full" href="/">
-          Accueil
-        </a><a class="page-link text-white hover:text-blue-400 w-full" href="/about.html">
-          Mon Projet
-        </a><a class="page-link text-white hover:text-blue-400 w-full" href="/blog/">
-          Le Blog
-        </a><a class="page-link text-white hover:text-blue-400 w-full" href="/gazette.html">
-          La Pyvazette
-        </a><a class="page-link text-white hover:text-blue-400 w-full" href="/cagnotte.html">
-          La Cagnotte
-        </a>
-</div>
-
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.querySelector('label[for="nav-trigger"]'); 
-    const menu = document.querySelector('.trigger');
-
-    // menu caché au départ
-    menu.classList.add('translate-x-full');
-
-    menuBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      menu.classList.toggle('translate-x-full'); // toggle drawer
-    });
-  });
-  </script>
 </header>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('mobile-menu-btn');
+  const overlay = document.getElementById('mobile-overlay');
+
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('mobile-menu-open');
+  });
+
+  overlay.addEventListener('click', () => {
+    document.body.classList.remove('mobile-menu-open');
+  });
+});
+</script>
 <script>
   function initHeader() {
     var lastScrollY = getScrollPos().y;
