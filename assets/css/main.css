@@ -266,7 +266,7 @@ html[data-scroll-status=top] header.site-header-transparent.site-header .site-br
   color: #fff;
   transition: 0.1s color;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   html[data-scroll-status=top] header.site-header-transparent.site-header .page-link {
     color: black;
   }
@@ -309,7 +309,7 @@ html[data-scroll-status=top] footer.site-footer .site-footer-inner {
   max-width: 100%;
   transition: 0.2s margin;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .site-header > .wrapper {
     margin: 0 50px;
     max-width: unset;
@@ -376,7 +376,7 @@ html[data-scroll-status=top] footer.site-footer .site-footer-inner {
 .site-nav .page-link:not(:last-child):hover {
   text-decoration: underline;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .site-nav {
     position: absolute;
     top: 0;
@@ -467,7 +467,7 @@ html[data-scroll-status=top] footer.site-footer .site-footer-inner {
   letter-spacing: -1px;
   line-height: 1;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .post .post-title {
     font-size: 27.25px;
   }
@@ -562,7 +562,7 @@ html[data-scroll-status=top] footer.site-footer .site-footer-inner {
 .pagination .post-list.z-reverse-image-style .post-item:nth-child(odd) .post-excerpt {
   flex-direction: row-reverse;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .pagination .post-list .post-item .post-excerpt {
     flex-direction: column !important;
   }
@@ -645,7 +645,7 @@ html[data-scroll-status=top] footer.site-footer .site-footer-inner {
 .post .post-content h2 {
   font-size: 42px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .post .post-content h2 {
     font-size: 36.75px;
   }
@@ -653,7 +653,7 @@ html[data-scroll-status=top] footer.site-footer .site-footer-inner {
 .post .post-content h3 {
   font-size: 34.125px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .post .post-content h3 {
     font-size: 28.875px;
   }
@@ -1817,4 +1817,385 @@ html:not([data-scroll-status="top"]) .site-tagline {
   }
   .page-link { padding: 8px 0; border: 0; }
 }
+html, body { margin: 0; padding: 0; background: #fff; }
 
+html, body { margin: 0; padding: 0; }
+header.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  margin: 0; padding-top: 0;
+  background: #fff; border: 0; box-shadow: none;
+}
+
+
+/* Variante transparente (décommente si tu veux superposer le banner) */
+/*
+.site-header.site-header-transparent {
+  background: transparent; border: 0; box-shadow: none;
+}
+*/
+
+/* iOS notch (si tu observes une zone non couverte) */
+/*
+@supports (padding: max(0px)) {
+  header.site-header { padding-top: max(0px, env(safe-area-inset-top)); }
+}
+*/
+
+
+/* Descend la marque de quelques pixels sans changer la hauteur du header */
+.site-brand-inner {
+  display: inline-flex;
+  flex-direction: column;       /* <-- empile verticalement */
+  align-items: flex-start;       /* <-- aligné à gauche */
+  gap: 2px;                      /* petit espace entre titre et tagline */
+}
+
+.site-title-text {
+  font-weight: 700;              /* option : ajuste le poids si tu veux */
+  font-size: 18px;               /* ou 20–22px selon ton design */
+  line-height: 1.2;
+  margin: 0;                     /* au cas où le thème mettrait un margin */
+}
+
+.site-tagline {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #666;                   /* un peu plus léger que le titre */
+  margin: 0;                     /* idem */
+}
+
+/* Si le header utilise un flex global, évitons que la marque se compresse trop */
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;                     /* espace entre la marque et la nav */
+  min-height: 56px;
+}
+
+/* Facultatif : sur desktop, tu peux grossir un peu le titre */
+@media (min-width: 768px) {
+  .site-title-text { font-size: 20px; }
+}
+
+header.site-header {
+  position: sticky; top: 10;
+  background: #fff; /* ou transparent si tu as un banner sous-jacent */
+  border: 0;        /* pour tester : enlève toute bordure supérieure */
+  margin: 0;
+  padding-top: 10;
+}
+/* Descend la marque de quelques pixels sans changer la hauteur du header */
+.site-brand-inner {
+  transform: translateY(30px);   /* ajuste 2–6px selon ton œil */
+}
+
+/* Descend la nav (bouton burger + liens) sans changer la hauteur du header */
+.site-nav {
+  transform: translateY(30px); /* ajuste 2–6px selon ton œil */
+}
+/* Titre fluide : min 20px, idéal ~4vw, max 32px */
+.site-title-text {
+  font-size: clamp(20px, 4vw, 32px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+/* Fluide entre 20px et 28px */
+.site-title-text {
+  font-size: clamp(20px, 4vw, 28px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+/* Très grand écran : autorise un peu plus grand */
+@media (min-width: 1400px) {
+  .site-title-text { font-size: clamp(24px, 2.2vw, 36px); }
+}
+/* Tagline légèrement fluide et toujours sous le titre */
+.site-tagline {
+  font-size: clamp(12px, 1.6vw, 14px);
+  line-height: 1.15;
+  color: #666;
+  margin-top: 2px;
+}
+/* Cible plus spécifique pour dépasser la plupart des thèmes */
+header.site-header .site-brand-inner .site-title-text {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+.site-nav .page-link {
+  max-width: 16ch;           /* ~16 caractères visibles */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+header.site-header nav.site-nav .trigger { flex-wrap: nowrap; }
+header.site-header nav.site-nav .page-link { white-space: nowrap; }
+
+@media (min-width: 1024px) {
+  .site-nav .trigger {
+    display: flex;
+    flex-wrap: nowrap;     /* pas de retour à la ligne */
+    gap: 20px;
+    align-items: center;
+    overflow: hidden;      /* évite le débordement visuel */
+  }
+}
+
+
+/* Bloc titre : 2 lignes max + ellipse si ça déborde */
+.site-title-text {
+  /* Taille fluide + bornes raisonnables */
+  font-size: clamp(1.4rem, 4.2vw, 2.2rem);
+  line-height: 1.15;
+  font-weight: 700;
+
+  /* Clamp sur 2 lignes + ellipse */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;          /* <= 2 lignes max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Evite un mot trop long qui casse la mise en page */
+  word-break: break-word;
+}
+
+
+
+/* Tagline : 1 ligne max + ellipse si ça déborde */
+.site-tagline {
+  font-size: clamp(0.85rem, 1.6vw, 1rem);
+  line-height: 1.2;
+  color: #666;
+
+  white-space: nowrap;            /* 1 seule ligne */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;                /* respecte la largeur dispo */
+}
+
+
+
+/* Titre : gros en desktop, rétrécit vite en dessous de 1200–1024px, max 2 lignes */
+header.site-header .site-brand-inner .site-title-text {
+  /* démarre plus grand qu'avant */
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  line-height: 1.15;
+  font-weight: 700;
+
+  /* maximum 2 lignes + ellipse si déborde */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+
+
+/* 1) Bouton burger : dimensions visibles + couleur + z-index */
+.nav-toggle {
+  display: inline-flex;           /* visible par défaut (mobile) */
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: #111;                    /* <— change en #fff si header sombre */
+  cursor: pointer;
+  z-index: 1001;                  /* au-dessus du panneau .trigger */
+}
+
+/* 2) Icône : s’assure que le path est visible */
+.menu-icon svg {
+  display: block;
+  width: 22px;
+  height: 18px;
+}
+.menu-icon svg path {
+  fill: currentColor;             /* <— crucial : hérite de .nav-toggle { color } */
+}
+
+/* ========== MOBILE PAR DÉFAUT (BURGER) ========== */
+
+/* Le bouton burger est VISIBLE par défaut */
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  background: transparent; border: 0; padding: 0; margin: 0;
+  color: #111;                 /* #fff si header sombre */
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* La nav (liste de liens) est cachée tant que le burger n'est pas ouvert */
+.site-nav .trigger {
+  display: none;
+  position: absolute;
+  left: 0; right: 0; top: 56px; /* ajuste à ta hauteur de header */
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  flex-direction: column;
+}
+
+/* Ouverture du panneau mobile quand on coche le checkbox */
+.nav-trigger:checked ~ .trigger { display: flex; }
+
+/* Icône burger (SVG ou barres CSS) hérite de la couleur */
+.menu-icon svg { display: block; width: 22px; height: 18px; }
+.menu-icon svg path { fill: currentColor; }
+
+/* ========== MOBILE PAR DÉFAUT (BURGER) ========== */
+
+/* Le bouton burger est VISIBLE par défaut */
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  background: transparent; border: 0; padding: 0; margin: 0;
+  color: #111;                 /* #fff si header sombre */
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* La nav (liste de liens) est cachée tant que le burger n'est pas ouvert */
+.site-nav .trigger {
+  display: none;
+  position: absolute;
+  left: 0; right: 0; top: 56px; /* ajuste à ta hauteur de header */
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  flex-direction: column;
+}
+
+/* Ouverture du panneau mobile quand on coche le checkbox */
+.nav-trigger:checked ~ .trigger { display: flex; }
+
+/* Icône burger (SVG ou barres CSS) hérite de la couleur */
+.menu-icon svg { display: block; width: 22px; height: 18px; }
+.menu-icon svg path { fill: currentColor; }
+
+/* --------- MOBILE PAR DÉFAUT (burger) --------- */
+/* Burger VISIBLE, nav masquée */
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  background: transparent; border: 0; padding: 0; margin: 0;
+  color: #111; /* change en #fff si header sombre */
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Icône (SVG) visible */
+.menu-icon svg { display: block; width: 22px; height: 18px; }
+.menu-icon svg path { fill: currentColor; }
+
+/* Panneau de liens (caché tant que le burger n'est pas ouvert) */
+.site-nav .trigger {
+  display: none;
+  position: absolute;
+  left: 0; right: 0; top: 56px; /* ajuste à la hauteur réelle de ton header */
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  flex-direction: column;
+}
+
+/* Ouverture du panneau mobile au clic sur le burger (checkbox cochée) */
+.nav-trigger:checked ~ .trigger { display: flex; }
+
+/* --------- DESKTOP UNIQUEMENT AU-DESSUS DU SEUIL --------- */
+/* Remplace 1200px par TON breakpoint, et garde la même valeur partout */
+@media (min-width: 1200px) {
+
+  /* Nav horizontale visible */
+  .site-nav .trigger {
+    display: flex;
+    position: static;
+    background: transparent;
+    border: 0;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+/* --- Bouton burger : visible, cliquable, au-dessus du reste --- */
+label.nav-toggle {
+  display: inline-flex;              /* visible par défaut côté mobile */
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;           /* mets #111 si header clair, #fff si header sombre */
+  color: #111;                       /* <— CHANGE ICI si besoin (ex: #fff sur fond sombre) */
+  cursor: pointer;
+  z-index: 1001;
+  opacity: 1;                        /* force visible */
+  visibility: visible;               /* force visible */
+}
+
+/* Si le header est sombre, inverse les couleurs (décommente) */
+/*
+header.site-header {
+  background: #111;
+}
+label.nav-toggle {
+  color: #fff;
+}
+*/
+
+/* --- Icône SVG : hérite de la couleur du bouton --- */
+label.nav-toggle .menu-icon svg {
+  display: block;
+  width: 22px;
+  height: 18px;
+}
+label.nav-toggle .menu-icon svg path {
+  fill: currentColor;                /* CRUCIAL : rend les barres visibles */
+  stroke: none;
+}
+
+/* --- Variante sans SVG : 3 barres en CSS (si tu préfères) --- */
+/* Si tu utilises <span class="burger-bar"></span> x3 dans le label */
+label.nav-toggle .burger-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  margin: 3px 0;
+  border-radius: 1px;
+}
+
+/* --- Le panneau mobile reste sous le bouton, pas au-dessus --- */
+.site-nav .trigger {
+  z-index: 1000;                     /* en-dessous du bouton (1001) */
+}
+
+/* --- Synchronisation breakpoint : mets ta valeur (ex: 1200px) --- */
+@media (min-width: 1200px) {
+  label.nav-toggle { display: none; }   /* burger caché en desktop */
+  .site-nav .trigger {
+    display: flex;
+    position: static;
+    background: transparent;
+    border: 0;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+}
