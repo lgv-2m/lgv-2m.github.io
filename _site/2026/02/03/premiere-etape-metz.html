@@ -351,52 +351,75 @@ document.addEventListener('DOMContentLoaded', function(event) {
   <div class="wrapper">
     <div class="site-header-inner">
 <div class="site-brand-inner" rel="author" onclick="window.location='/';" style="cursor:pointer;">
-        <div class="site-title-text">Le Grand Voyage</div>
-        <div class="site-tagline">de Metz à la Mongolie</div>
+        <div class="site-title-text">Le Grand Voyage
+        <div class="site-tagline">de Metz à la Mongolie
       </div>
-<nav class="site-nav relative">
+    </div>
 
-        <!-- bouton mobile -->
-        <label for="nav-trigger" class="md:hidden cursor-pointer p-2 bg-gray-800 text-white rounded">
-          ☰
-        </label>
 
-        <!-- menu principal -->
-        <div class="trigger hidden flex-col md:flex md:flex-row bg-white md:bg-transparent shadow md:shadow-none p-4 md:p-0 absolute md:static top-16 left-0 w-full md:w-auto">
-<a class="page-link block md:inline-block px-4 py-2 text-gray-800 hover:text-blue-600" href="/">
-                Accueil
-              </a><a class="page-link block md:inline-block px-4 py-2 text-gray-800 hover:text-blue-600" href="/about.html">
-                Mon Projet
-              </a><a class="page-link block md:inline-block px-4 py-2 text-gray-800 hover:text-blue-600" href="/blog/">
-                Le Blog
-              </a><a class="page-link block md:inline-block px-4 py-2 text-gray-800 hover:text-blue-600" href="/gazette.html">
-                La Pyvazette
-              </a><a class="page-link block md:inline-block px-4 py-2 text-gray-800 hover:text-blue-600" href="/cagnotte.html">
-                La Cagnotte
-              </a>
+
+      <nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          
+
+          <div class="trigger hidden:flex">
+<a class="page-link" href="/">Accueil</a><a class="page-link" href="/about.html">Mon Projet</a><a class="page-link" href="/blog/">Le Blog</a><a class="page-link" href="/gazette.html">La Pyvazette</a><a class="page-link" href="/cagnotte.html">La Cagnotte</a>
 </div>
-
-      </nav>
+          </nav>
 </div>
+        </div>
   </div>
 
-</header>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('label[for="nav-trigger"]'); 
+    const menu = document.querySelector('.trigger');                     
 
-<script>
+    // On s'assure que le menu est caché
+    menu.classList.add('hidden');
+
+    menuBtn.addEventListener('click', function(e) {
+      e.preventDefault(); // empêche le comportement du checkbox
+      menu.classList.toggle('hidden'); // toggle manuel du menu
+    });
+  });
+  </script>
+
+  <!-- bouton ☰ pour mobile -->
+  <label for="nav-trigger" class="md:hidden cursor-pointer p-2 text-white z-50 relative">
+    ☰
+  </label>
+
+  <!-- menu mobile drawer -->
+  <div class="trigger fixed top-0 right-0 h-full w-64 bg-black bg-opacity-90 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-start p-6 space-y-6 md:static md:flex md:flex-row md:bg-transparent md:translate-x-0 md:p-0 md:space-y-0 md:space-x-4">
+<a class="page-link text-white hover:text-blue-400 w-full" href="/">
+          Accueil
+        </a><a class="page-link text-white hover:text-blue-400 w-full" href="/about.html">
+          Mon Projet
+        </a><a class="page-link text-white hover:text-blue-400 w-full" href="/blog/">
+          Le Blog
+        </a><a class="page-link text-white hover:text-blue-400 w-full" href="/gazette.html">
+          La Pyvazette
+        </a><a class="page-link text-white hover:text-blue-400 w-full" href="/cagnotte.html">
+          La Cagnotte
+        </a>
+</div>
+
+  <script>
   document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.querySelector('label[for="nav-trigger"]'); 
     const menu = document.querySelector('.trigger');
 
-    // On s'assure que le menu est caché au départ
-    menu.classList.add('hidden');
+    // menu caché au départ
+    menu.classList.add('translate-x-full');
 
-    // Toggle menu mobile
     menuBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      menu.classList.toggle('hidden');
+      menu.classList.toggle('translate-x-full'); // toggle drawer
     });
   });
-</script>
+  </script>
+</header>
 
 <script>
   function initHeader() {
