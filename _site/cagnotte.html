@@ -675,7 +675,32 @@ document.addEventListener('DOMContentLoaded', () => {
      <div class="articles">
   
 
-  <h1> La Cagnotte </h1>
+  ...
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('mobile-menu-btn');
+  const overlay = document.getElementById('mobile-overlay');
+
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('mobile-menu-open');
+  });
+
+  overlay.addEventListener('click', () => {
+    document.body.classList.remove('mobile-menu-open');
+  });
+});
+</script>
+
+</div></section>
+</div>
+</div></main>
+</body>
+</html><html>
+<h1> La Cagnotte </h1>
 
 <p style="text-align: center;"> 
     Vous pouvez ici, participez financièrement aux frais de réalisation du journal et/ou au voyage.
@@ -702,10 +727,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   
-</div>
 
 
-  </section>
+
+  
   <section class="sidebar" style="margin-left: 15px;">
     <!-- Get sidebar items -->
 
@@ -741,10 +766,10 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 
 </section>
-</div>
 
-      </div>
-    </main><footer class="site-footer h-card">
+
+      
+    <footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
@@ -757,7 +782,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 </footer>
-</body>
+
 
   
 </html>
