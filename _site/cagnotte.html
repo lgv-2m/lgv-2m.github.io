@@ -666,23 +666,31 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 <p style="text-align: center;">
   5% des dons sont versés pour l’association :
-  <a href="https://www.youtube.com/watch?v=gthfO59r9UY" style="color: #1d4ed8; text-decoration: underline;" target="_blank" rel="noopener">
+  <a href="https://tribee.fr/les-associations/les-clowns-de-lespoir" style="color: #1d4ed8; text-decoration: underline;" target="_blank" rel="noopener">
     Les clowns de l'espoir
   </a>
-   ou visitez le site pour en savoir plus.
+   
 </p>
-
-<!-- STYLE local : image responsive -->
 <style>
+  /* Centrer le lien (et donc l'image) */
+  .youtube-link {
+    display: block;
+    text-align: center;   /* centre tout le contenu */
+    margin: 20px 0;       /* espace autour (optionnel) */
+  }
+
+  /* Style de l’image */
   .youtube-link img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
     display: inline-block;
   }
 </style>
 
+
+
 <a class="youtube-link" href="https://www.youtube.com/watch?v=gthfO59r9UY" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '_blank', 'noopener'); return false;">
-  <img src="/assets/images/tribee_screen_shot.png" alt="Aperçu vidéo">
+  <img src="/assets/images/vignette_video.png" alt="Aperçu vidéo">
 </a>
 
 
