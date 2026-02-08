@@ -5,46 +5,20 @@ banner : "assets/images/banners/blog_edit.jpg"
 permalink: /blog/
 
 ---
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Blog</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-800">
 
-  <header class="py-6">
-    <div class="container mx-auto px-4">
-        <h1 class="text-3xl font-bold text-gray-800">Mon Blog de Voyage</h1>
-        <p class="mt-1 text-gray-500"></p>
-    </div>
-    </header>
+<h1> Mon Blog de Voyage </h1>
 
-  <main class="w-full px-4 py-8 flex flex-col gap-8">
-    {% for post in site.posts %}
-        <article class="bg-white rounded-2xl shadow p-4 flex flex-col hover:shadow-lg transition">
+<main class="blog-list">
+  {% for post in site.posts %}
+    <article class="post-card">
+      {% if post.image %}
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+      {% endif %}
 
-        <!-- Image principale uniquement -->
-        {% if post.image %}
-            <img src="{{ post.image }}" alt="{{ post.title }}" class="rounded-xl mb-4 object-cover h-64 w-full">
-        {% endif %}
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
 
-        <!-- Titre de l’article -->
-        <h2 class="text-2xl font-semibold mb-2">{{ post.title }}</h2>
-
-        <!-- Résumé / extrait du Markdown -->
-        <p class="text-gray-600 flex-grow">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-
-        <!-- Bouton Lire la suite -->
-        <a href="{{ post.url | relative_url }}" class="mt-4 text-blue-600 font-medium underline decoration-blue-300 hover:decoration-blue-500 transition">
-            Lire la suite →
-        </a>
-
-        </article>
-    {% endfor %}
-    </main>
-
-</body>
-</html>
+      <a href="{{ post.url | relative_url }}" class="read-more">Lire la suite →</a>
+    </article>
+  {% endfor %}
+</main>
