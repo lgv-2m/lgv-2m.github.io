@@ -2738,3 +2738,26 @@ label.nav-toggle .burger-bar {
   .site-nav .trigger::-webkit-scrollbar { width: 6px; }
   .site-nav .trigger::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
 }
+
+/* === CENTRAGE HOMOGÈNE des items du menu burger === */
+/* Ne change QUE l'intérieur du panneau : alignement, pas le layout global */
+@media (max-width: 1200px) {
+  .site-nav .trigger .page-link {
+    display: flex !important;              /* flex pour centrer */
+    align-items: center !important;         /* centrage vertical */
+    justify-content: center !important;     /* centrage horizontal */
+    text-align: center !important;          /* multi-lignes (si jamais) centré */
+    width: 100% !important;                 /* pleine largeur du panneau */
+    padding: 12px 16px !important;          /* spacing régulier */
+    margin: 0 !important;
+    border: 0 !important;                   /* pas de traits parasites */
+    white-space: nowrap !important;         /* 1 ligne (tu peux enlever si tu veux autoriser 2 lignes) */
+  }
+
+  /* État focus/hover cohérent et discret */
+  .site-nav .trigger .page-link:focus,
+  .site-nav .trigger .page-link:hover {
+    background: #f5f5f5 !important;
+    outline: none !important;
+  }
+}
