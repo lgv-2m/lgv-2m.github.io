@@ -56,7 +56,9 @@ favicon: "" # the favicon for your site
 yat:
   date_format: "%b %d, %Y"
 
-
+url: "https://lgv-2m.fr"
+github:   
+    is_project_page: false
 # If you want more debug log, you can set true
 # debug: false
 
