@@ -660,23 +660,30 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   <h1> La Cagnotte </h1>
 
-<p style="text-align: center;"> 
-    Vous pouvez ici, participez financièrement aux frais de réalisation du journal et/ou au voyage.
-
-</p>
 <p style="text-align: center;">
-5% des dons sont versés pour l’association : "<a href="https://www.youtube.com/watch?v=gthfO59r9UY" style="color: #1d4ed8; text-decoration: underline; target=" _blank>
-  Les clowns de l'espoir
-</a>"  ou visitez le site pour en savoir plus.
+    Vous pouvez ici, participez financièrement aux frais de réalisation du journal et/ou au voyage.
 </p>
 
-<div class="flex justify-center">
-  <a href="https://www.youtube.com/watch?v=gthfO59r9UY" target="_blank" rel="noopener">
-  <img src="assets/images/tribee_screen_shot.png" alt="Description">
-    </a>
-</div>
+<p style="text-align: center;">
+  5% des dons sont versés pour l’association :
+  <a href="https://www.youtube.com/watch?v=gthfO59r9UY" style="color: #1d4ed8; text-decoration: underline;" target="_blank" rel="noopener">
+    Les clowns de l'espoir
+  </a>
+   ou visitez le site pour en savoir plus.
+</p>
 
+<!-- STYLE local : image responsive -->
+<style>
+  .youtube-link img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+</style>
 
+<a class="youtube-link" href="https://www.youtube.com/watch?v=gthfO59r9UY" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '_blank', 'noopener'); return false;">
+  <img src="/assets/images/tribee_screen_shot.png" alt="Aperçu vidéo">
+</a>
 
 
 
