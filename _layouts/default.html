@@ -21,6 +21,18 @@
     lastScroll = currentScroll;
   });
   </script>
+  <!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+
+    {%- comment -%} Canonical pour toutes les pages {%- endcomment -%}
+    {% include custom-head.html %}
+
+    <!-- ... tes autres liens CSS/JS ... -->
+  </head>
+
+</html>
   <body>
 
     {%- include views/header.html -%}
