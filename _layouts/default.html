@@ -29,7 +29,11 @@
     {%- comment -%} Canonical pour toutes les pages {%- endcomment -%}
     {% include custom-head.html %}
 
-    <!-- ... tes autres liens CSS/JS ... -->
+    <script>
+      if (window.location.hostname === "lgv-2m.github.io") {
+        window.location.replace("https://lgv-2m.fr" + window.location.pathname);
+      }
+    </script>
   </head>
 
 </html>
