@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>http://localhost:4000/2026/02/03/premiere-etape-metz.html</loc>
-<lastmod>2026-02-03T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/about.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/blog/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/cagnotte.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/gazette.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/MAPS/trajet_en_cours.html</loc>
-<lastmod>2026-02-03T22:54:56+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/MAPS/trajet_fancy.html</loc>
-<lastmod>2026-02-03T22:52:30+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/googled3d44a4033d13c8c.html</loc>
-<lastmod>2026-02-04T20:26:58+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/googlee69377439c1915e3.html</loc>
-<lastmod>2026-02-08T16:07:21+01:00</lastmod>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lgv-2m.fr/</loc>
+    <priority>1.0</priority>
+  </url>
 </urlset>
