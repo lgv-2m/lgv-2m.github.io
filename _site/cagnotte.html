@@ -669,10 +669,81 @@ document.addEventListener('DOMContentLoaded', function(event) {
     Vous pouvez ici, participer aux frais de réalisation du journal et/ou au voyage.
 </p>
 
+<!-- Import Roboto -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+
+<style>
+/* On cache/affiche selon la taille */
+.hero-desktop { display: block; }
+.hero-mobile  { display: none; }
+
+@media (max-width: 768px) {
+  .hero-desktop { display: none; }
+  .hero-mobile  { display: block; }
+}
+
+/* Styles communs */
+.hero {
+  position: relative;
+  width: 100%;
+}
+.hero img {
+  width: 100%;
+  display: block;
+}
+.btn-participer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e63946;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Desktop : plus large, plus épais, plus bas */
+.hero-desktop .btn-participer {
+  bottom: 60px;
+  width: clamp(200px, 50%, 560px);
+  padding: 10px 0;
+  font-size: clamp(16px, 2vw, 20px);
+  border-radius: 12px;
+}
+
+/* Mobile : plus fin, plus petit */
+.hero-mobile .btn-participer {
+  bottom: 80px;
+  width: clamp(120px, 75%, 320px);
+  padding: 6px 0;
+  font-size: clamp(13px, 4vw, 17px);
+  border-radius: 10px;
+}
+</style>
+
+<!-- Version desktop -->
+<div class="hero hero-desktop">
+  <img src="assets/images/image_cqgnotte_ordi.png" alt="Cagnotte desktop">
+  <a class="btn-participer" href="https://tribee.fr/participations/le-grand-voyage-de-metz-a-la-mongolie">
+    Participer
+  </a>
+</div>
+
+<!-- Version mobile -->
+<div class="hero hero-mobile">
+  <img src="assets/images/image_cagnotte_mobile.png" alt="Cagnotte mobile">
+  <a class="btn-participer" href="https://tribee.fr/participations/le-grand-voyage-de-metz-a-la-mongolie">
+    Participer
+  </a>
+</div>
+
 
 <style>
 .hero-container {
     position: relative;
+    width: 100%;
     display: inline-block;
 }
 
@@ -682,33 +753,54 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: block;
 }
 
-/* Bouton */
 .btn-participer {
     position: absolute;
-    bottom: 20px;              /* distance du bas de l'image */
-    left: 60%;
+    bottom: 100px;
+    left: 50%;
     transform: translateX(-50%);
-    padding: 5px 220px;
+
+    /* Largeur fluide (tres adaptable) */
+    width: clamp(120px, 50%, 420px);
+
+    /* 🔥 HAUTEUR TOTALEMENT RESPONSIVE : clamp ! */
+    padding: clamp(4px, 1.2vw, 10px) 0;
+
     background-color: #e63946;
-    color: white;
+    color: #fff;
     text-decoration: none;
-    border-radius: 10px;
-    font-size: 20px;
+    text-align: center;
+
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-family: sans-serif;
-    transition: 0.2s;
+    font-size: clamp(12px, 2vw, 18px);
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
 }
 
-.btn-participer:hover {
-    background-color: #e63946;
+/* Mobile */
+@media (max-width: 600px) {
+    .btn-participer {
+        width: clamp(100px, 70%, 320px);
+
+        /* encore plus fin sur mobile */
+        padding: clamp(3px, 2vw, 8px) 0;
+        bottom: 12px;
+    }
+}
+
+/* Très petits écrans (iPhone SE) */
+@media (max-width: 380px) {
+    .btn-participer {
+        width: clamp(80px, 80%, 240px);
+
+        /* hauteur mini */
+        padding: clamp(2px, 2.5vw, 6px) 0;
+        font-size: 12px;
+    }
 }
 </style>
-
-<div class="hero-container">
-    <img src="assets/images/image_cagnotte.png" alt="banniere">
-    <a href="https://tribee.fr/participations/le-grand-voyage-de-metz-a-la-mongolie" class="btn-participer">PARTICIPER</a>
-</div>
-
 
 <p style="text-align:;">
   5 % des dons sont versés pour l’association :
