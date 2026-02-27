@@ -7,10 +7,51 @@ banner : "assets/images/banners/IMG_3350_photo.jpg"
 <h1> La Cagnotte </h1>
 
 <p style="text-align:;">
-    Vous pouvez ici, participer financièrement aux frais de réalisation du journal et/ou au voyage.
+    Vous pouvez ici, participer aux frais de réalisation du journal et/ou au voyage.
 </p>
 
-<p style="text-align: center;">
+
+<style>
+.hero-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Bouton */
+.btn-participer {
+    position: absolute;
+    bottom: 20px;              /* distance du bas de l'image */
+    left: 60%;
+    transform: translateX(-50%);
+    padding: 5px 220px;
+    background-color: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    transition: 0.2s;
+}
+
+.btn-participer:hover {
+    background-color: #e63946;
+}
+</style>
+
+<div class="hero-container">
+    <img src="assets/images/image_cagnotte.png" alt="banniere">
+    <a href="https://tribee.fr/participations/le-grand-voyage-de-metz-a-la-mongolie" class="btn-participer">PA@w    cRTICIPER</a>
+</div>
+
+
+<p style="text-align:;">
   5 % des dons sont versés pour l’association&nbsp;:
   <a href="https://tribee.fr/les-associations/les-clowns-de-lespoir"
      style="color: #1d4ed8; text-decoration: underline;"
@@ -34,6 +75,8 @@ banner : "assets/images/banners/IMG_3350_photo.jpg"
     display: inline-block;
   }
 </style>
+
+
 
 
 
