@@ -73,4 +73,29 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
   <!-- Script Instagram -->
   <script async src="//www.instagram.com/embed.js"></script>
 
+  <script>
+    window.addEventListener('load', function() {
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    });
+  </script>
+  <!-- Espace avant le Facebook embed -->
+  <div style="margin-top: 50px;"></div>
+
+  <!-- Conteneur Facebook -->
+  <div style="width: 100%; display: flex; justify-content: center;">
+    <div class="fb-post" 
+        data-href="https://www.facebook.com/facebook/posts/XXXXXXXX" 
+        data-width="100%">
+    </div>
+  </div>
+
+  <!-- Script Facebook -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" 
+          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" 
+          nonce="ABC123">
+  </script>
+
 </section>
