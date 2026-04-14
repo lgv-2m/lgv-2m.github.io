@@ -7,6 +7,40 @@ title: Accueil
 banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
 
 ---
+<div class="latest-strip-inner responsive-flex">
+
+  {% assign pages_to_show = site.pages | where_exp: "p", 
+    "p.title == 'La Pyvazette' or p.title == 'La Cagnotte'" %}
+
+  {% for page in pages_to_show %}
+    <a class="latest-post-card" href="{{ page.url | relative_url }}">
+
+      <div class="latest-post-image"
+           style="background-image:url('{{ page.preview_image | relative_url }}');">
+      </div>
+
+      <div class="latest-post-content">
+        <h3 class="latest-post-title">{{ page.title }}</h3>
+
+        {% if page.preview_date %}
+        <time class="latest-post-date">
+          {{ page.preview_date | date: "%d %B %Y" }}
+        </time>
+        {% endif %}
+
+        {% if page.preview_excerpt %}
+        <p class="latest-post-excerpt">
+          {{ page.preview_excerpt }}
+        </p>
+        {% endif %}
+      </div>
+
+    </a>
+  {% endfor %}
+
+</div>
+
+
 <h1 class="home-section-title">Les dernières nouvelles</h1>
 
 <section class="home-latest-strip">
@@ -29,6 +63,10 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
       {%- assign jour_str = jour -%}
     {%- endif -%}
 
+
+    <br><br>
+
+    
     <div class="latest-strip-inner responsive-flex">
 
       <!-- Carte du dernier post -->
