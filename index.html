@@ -1,51 +1,48 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 title: Accueil
 banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
-
 ---
-<div class="latest-strip-inner responsive-flex">
 
-  {% assign pages_to_show = site.pages | where_exp: "p", "p.title == 'La Pyvazette' or p.title == 'La Cagnotte'" %}
+<!-- ========================= -->
+<!-- APERÇUS PAGES (Pyvazette / Cagnotte) -->
+<!-- ========================= -->
+<h2>À découvrir</h2>
 
-  {% for page in pages_to_show %}
-    <a class="latest-post-card" href="{{ page.url | relative_url }}">
+<div class="home-previews">
 
-      <div class="latest-post-image"
-           style="background-image:url('{{ page.preview_image | relative_url }}');">
-      </div>
+  <!-- Aperçu Pyvazette -->
+  <a href="{{ '/gazette.html' | relative_url }}" class="home-preview">
+    <div class="home-preview-image"
+         style="background-image: url('{{ 'assets/images/preview_pyvazette.png' | relative_url }}');">
+    </div>
+    <div class="home-preview-content">
+      <h3>La Pyvazette</h3>
+      <p>Le journal du voyage, récits, images et carnets de route.</p>
+    </div>
+  </a>
 
-      <div class="latest-post-content">
-        <h3 class="latest-post-title">{{ page.title }}</h3>
-
-        {% if page.preview_date %}
-        <time class="latest-post-date">
-          {{ page.preview_date | date: "%d %B %Y" }}
-        </time>
-        {% endif %}
-
-        {% if page.preview_excerpt %}
-        <p class="latest-post-excerpt">
-          {{ page.preview_excerpt }}
-        </p>
-        {% endif %}
-      </div>
-
-    </a>
-  {% endfor %}
+  <!-- Aperçu Cagnotte -->
+  <a href="{{ '/cagnotte.html' | relative_url }}" class="home-preview">
+    <div class="home-preview-image"
+         style="background-image: url('{{ 'assets/images/preview_cagnotte.png' | relative_url }}');">
+    </div>
+    <div class="home-preview-content">
+      <h3>La Cagnotte</h3>
+      <p>Soutenir le projet et participer à l’aventure.</p>
+    </div>
+  </a>
 
 </div>
 
-<br>
-<br>
-
+<!-- ========================= -->
+<!-- DERNIÈRES NOUVELLES -->
+<!-- ========================= -->
 
 <h1 class="home-section-title">Les dernières nouvelles</h1>
 
 <section class="home-latest-strip">
+
   {% assign latest_posts = site.posts | sort: "date" | reverse | slice: 0, 1 %}
   {% for post in latest_posts %}
 
@@ -56,21 +53,11 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
       | default: "/assets/images/default-image.jpeg"
     %}
 
-    {%- assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
-    {%- assign jour = post.date | date: "%-d" -%}
-    {%- assign mois_index = post.date | date: "%-m" | minus: 1 -%}
-    {%- if jour == "1" -%}
-      {%- assign jour_str = "1er" -%}
-    {%- else -%}
-      {%- assign jour_str = jour -%}
-    {%- endif -%}
-
-
-    
     <div class="latest-strip-inner responsive-flex">
 
-      <!-- Carte du dernier post -->
+      <!-- Carte du dernier article -->
       <a class="latest-post-card" href="{{ post.url | relative_url }}">
+
         <div class="latest-post-image"
              style="background-image:url('{{ post_image | relative_url }}');">
         </div>
@@ -78,45 +65,41 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
         <div class="latest-post-content">
           <h3 class="latest-post-title">{{ post.title }}</h3>
           <time class="latest-post-date">
-            {{ jour_str }} {{ mois[mois_index] }} {{ post.date | date: "%Y" }}
+            {{ post.date | date: "%d %B %Y" }}
           </time>
         </div>
+
       </a>
 
-      <!-- Image fixe à côté (juste l'image, pas de bordure) -->
+      <!-- Carte / carte de trajet -->
       <div class="fixed-side-image">
-        <iframe src="MAPS/trajet_en_cours.html" 
-                width="100%" 
-                height="400px" 
-                style="border:none;">
+        <iframe
+          src="MAPS/trajet_en_cours.html"
+          width="100%"
+          height="400"
+          style="border:none;">
         </iframe>
       </div>
 
     </div>
-    
+
   {% endfor %}
 
-  <!-- Espace avant l'Instagram embed -->
+  <!-- ========================= -->
+  <!-- INSTAGRAM -->
+  <!-- ========================= -->
+
   <div style="margin-top: 50px;"></div>
 
-  <!-- Conteneur Instagram -->
   <div style="width: 100%; display: flex; justify-content: center;">
-    <blockquote class="instagram-media" 
-                data-instgrm-permalink="https://www.instagram.com/legrandvoyage.metz_mongolie?utm_source=qr" 
-                data-instgrm-version="14" 
-                style="width: 100%; max-width: 900px; margin: 0 auto;">
+    <blockquote
+      class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/legrandvoyage.metz_mongolie/"
+      data-instgrm-version="14"
+      style="width: 100%; max-width: 900px; margin: 0 auto;">
     </blockquote>
   </div>
 
-  <!-- Script Instagram -->
   <script async src="//www.instagram.com/embed.js"></script>
-
-  <script>
-    window.addEventListener('load', function() {
-      if (window.instgrm) {
-        window.instgrm.Embeds.process();
-      }
-    });
-  </script>
 
 </section>

@@ -663,117 +663,89 @@ document.addEventListener('DOMContentLoaded', function(event) {
      <div class="articles">
   
 
-  <div class="latest-strip-inner responsive-flex">
+  <!-- ========================= -->
+<!-- APERÇUS PAGES (Pyvazette / Cagnotte) -->
+<!-- ========================= -->
+<h2>À découvrir</h2>
 
-  
+<div class="home-previews">
 
-  
-    <a class="latest-post-card" href="/cagnotte.html">
+  <!-- Aperçu Pyvazette -->
+  <a href="/gazette.html" class="home-preview">
+    <div class="home-preview-image" style="background-image: url('/assets/images/preview_pyvazette.png');">
+    </div>
+    <div class="home-preview-content">
+      <h3>La Pyvazette</h3>
+      <p>Le journal du voyage, récits, images et carnets de route.</p>
+    </div>
+  </a>
 
-      <div class="latest-post-image" style="background-image:url('/assets/images/preview_cagnotte.png');">
-      </div>
-
-      <div class="latest-post-content">
-        <h3 class="latest-post-title">La Cagnotte</h3>
-
-        
-        <time class="latest-post-date">
-          13 April 2026
-        </time>
-        
-
-        
-        <p class="latest-post-excerpt">
-          Participez au financement du journal et du voyage.
-        </p>
-        
-      </div>
-
-    </a>
-  
-    <a class="latest-post-card" href="/gazette.html">
-
-      <div class="latest-post-image" style="background-image:url('/assets/images/preview_pyvazette.png');">
-      </div>
-
-      <div class="latest-post-content">
-        <h3 class="latest-post-title">La Pyvazette</h3>
-
-        
-        <time class="latest-post-date">
-          13 April 2026
-        </time>
-        
-
-        
-        <p class="latest-post-excerpt">
-          Le journal du voyage, récits, images et carnets de route.
-        </p>
-        
-      </div>
-
-    </a>
-  
+  <!-- Aperçu Cagnotte -->
+  <a href="/cagnotte.html" class="home-preview">
+    <div class="home-preview-image" style="background-image: url('/assets/images/preview_cagnotte.png');">
+    </div>
+    <div class="home-preview-content">
+      <h3>La Cagnotte</h3>
+      <p>Soutenir le projet et participer à l’aventure.</p>
+    </div>
+  </a>
 
 </div>
 
-<br>
-<br>
-
+<!-- ========================= -->
+<!-- DERNIÈRES NOUVELLES -->
+<!-- ========================= -->
 
 <h1 class="home-section-title">Les dernières nouvelles</h1>
 
 <section class="home-latest-strip">
+
   
   
+
+    
 
     <div class="latest-strip-inner responsive-flex">
 
-      <!-- Carte du dernier post -->
+      <!-- Carte du dernier article -->
       <a class="latest-post-card" href="/2026/02/10/D%C3%A9part.html">
+
         <div class="latest-post-image" style="background-image:url('/assets/images/default-image.jpeg');">
         </div>
 
         <div class="latest-post-content">
           <h3 class="latest-post-title">Départ</h3>
           <time class="latest-post-date">
-            10 février 2026
+            10 February 2026
           </time>
         </div>
+
       </a>
 
-      <!-- Image fixe à côté (juste l'image, pas de bordure) -->
+      <!-- Carte / carte de trajet -->
       <div class="fixed-side-image">
-        <iframe src="MAPS/trajet_en_cours.html" width="100%" height="400px" style="border:none;">
+        <iframe src="MAPS/trajet_en_cours.html" width="100%" height="400" style="border:none;">
         </iframe>
       </div>
 
     </div>
-    
+
   
 
-  <!-- Espace avant l'Instagram embed -->
+  <!-- ========================= -->
+  <!-- INSTAGRAM -->
+  <!-- ========================= -->
+
   <div style="margin-top: 50px;"></div>
 
-  <!-- Conteneur Instagram -->
   <div style="width: 100%; display: flex; justify-content: center;">
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/legrandvoyage.metz_mongolie?utm_source=qr" data-instgrm-version="14" style="width: 100%; max-width: 900px; margin: 0 auto;">
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/legrandvoyage.metz_mongolie/" data-instgrm-version="14" style="width: 100%; max-width: 900px; margin: 0 auto;">
     </blockquote>
   </div>
 
-  <!-- Script Instagram -->
   <script async src="//www.instagram.com/embed.js"></script>
 
-  <script>
-    window.addEventListener('load', function() {
-      if (window.instgrm) {
-        window.instgrm.Embeds.process();
-      }
-    });
-  </script>
-
 </section>
-
 
 
   
