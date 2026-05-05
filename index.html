@@ -5,37 +5,6 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
 ---
 
 <!-- ========================= -->
-<!-- APERÇUS PAGES (Pyvazette / Cagnotte) -->
-<!-- ========================= -->
-<h2>À découvrir</h2>
-
-<div class="home-previews">
-
-  <!-- Aperçu Pyvazette -->
-  <a href="{{ '/gazette.html' | relative_url }}" class="home-preview">
-    <div class="home-preview-image"
-         style="background-image: url('{{ 'assets/images/preview_pyvazette.png' | relative_url }}');">
-    </div>
-    <div class="home-preview-content">
-      <h3>La Pyvazette</h3>
-      <p>Le journal du voyage, récits, images et carnets de route.</p>
-    </div>
-  </a>
-
-  <!-- Aperçu Cagnotte -->
-  <a href="{{ '/cagnotte.html' | relative_url }}" class="home-preview">
-    <div class="home-preview-image"
-         style="background-image: url('{{ 'assets/images/preview_cagnotte.png' | relative_url }}');">
-    </div>
-    <div class="home-preview-content">
-      <h3>La Cagnotte</h3>
-      <p>Soutenir le projet et participer à l’aventure.</p>
-    </div>
-  </a>
-
-</div>
-
-<!-- ========================= -->
 <!-- DERNIÈRES NOUVELLES -->
 <!-- ========================= -->
 
@@ -84,6 +53,37 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
     </div>
 
   {% endfor %}
+
+  <!-- ========================= -->
+  <!-- APERÇUS PAGES (Pyvazette / Cagnotte) -->
+  <!-- ========================= -->
+  <h2>À découvrir</h2>
+
+  <div class="home-previews">
+
+    <!-- Aperçu Pyvazette -->
+    <a href="{{ '/gazette.html' | relative_url }}" class="home-preview">
+      <div class="home-preview-image"
+          style="background-image: url('{{ 'assets/images/preview_pyvazette.png' | relative_url }}');">
+      </div>
+      <div class="home-preview-content">
+        <h3>La Pyvazette</h3>
+        <p>Le journal du voyage, récits, images et carnets de route.</p>
+      </div>
+    </a>
+
+    <!-- Aperçu Cagnotte -->
+    <a href="{{ '/cagnotte.html' | relative_url }}" class="home-preview">
+      <div class="home-preview-image"
+          style="background-image: url('{{ 'assets/images/preview_cagnotte.png' | relative_url }}');">
+      </div>
+      <div class="home-preview-content">
+        <h3>La Cagnotte</h3>
+        <p>Soutenir le projet et participer à l’aventure.</p>
+      </div>
+    </a>
+
+  </div>
 
   <!-- ========================= -->
   <!-- INSTAGRAM -->
