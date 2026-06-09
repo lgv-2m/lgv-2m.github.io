@@ -35,19 +35,21 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
 
 <section class="home-latest-strip">
 
+<section class="home-latest-strip">
+
   {% assign latest_posts = site.posts | sort: "date" | reverse | slice: 0, 2 %}
-  {% for post in latest_posts %}
 
-    {% assign post_image =
-      post.excerpt_image
-      | default: post.banner.image
-      | default: post.image
-      | default: "/assets/images/default-image.jpeg"
-    %}
+  <div class="latest-strip-inner responsive-flex">
 
-    <div class="latest-strip-inner responsive-flex">
+    {% for post in latest_posts %}
 
-      <!-- Carte du dernier article -->
+      {% assign post_image =
+        post.excerpt_image
+        | default: post.banner.image
+        | default: post.image
+        | default: "/assets/images/default-image.jpeg"
+      %}
+
       <a class="latest-post-card" href="{{ post.url | relative_url }}">
 
         <div class="latest-post-image"
@@ -63,12 +65,10 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
 
       </a>
 
+    {% endfor %}
 
-      
-
-    </div>
-
-  {% endfor %}<br>
+  </div>
+<br>
 
   <!-- Carte / carte de trajet -->
   <div class="fixed-side-image">
