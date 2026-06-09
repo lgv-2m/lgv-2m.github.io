@@ -4,6 +4,29 @@ title: Accueil
 banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
 ---
 
+
+<!-- ========================= -->
+  <!-- APERÇUS PAGES (Pyvazette / Cagnotte) -->
+  <!-- ========================= -->
+
+  <h1>La Pyvazette</h1>
+
+  <div class="home-previews">
+
+    <!-- Aperçu Pyvazette -->
+    <a href="{{ '/gazette.html' | relative_url }}" class="home-preview">
+      <div class="home-preview-image"
+          style="background-image: url('{{ 'assets/images/preview_pyvazette.png' | relative_url }}');">
+      </div>
+      <div class="home-preview-content">
+        <h3>La Pyvazette</h3>
+        <p>Le journal du voyage, récits, images et carnets de route.</p>
+      </div>
+    </a>
+
+  </div>
+
+
 <!-- ========================= -->
 <!-- DERNIÈRES NOUVELLES -->
 <!-- ========================= -->
@@ -40,6 +63,8 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
 
       </a>
 
+      
+
       <!-- Carte / carte de trajet -->
       <div class="fixed-side-image">
         <iframe
@@ -55,26 +80,7 @@ banner: "assets/images/banners/1026b8cd-792a-43b0-8959-1bf73368f380.jpeg"
   {% endfor %}<br>
 
 
-  <!-- ========================= -->
-  <!-- APERÇUS PAGES (Pyvazette / Cagnotte) -->
-  <!-- ========================= -->
-
-  <h1>À découvrir</h1>
-
-  <div class="home-previews">
-
-    <!-- Aperçu Pyvazette -->
-    <a href="{{ '/gazette.html' | relative_url }}" class="home-preview">
-      <div class="home-preview-image"
-          style="background-image: url('{{ 'assets/images/preview_pyvazette.png' | relative_url }}');">
-      </div>
-      <div class="home-preview-content">
-        <h3>La Pyvazette</h3>
-        <p>Le journal du voyage, récits, images et carnets de route.</p>
-      </div>
-    </a>
-
-  </div>
+  
 
   <!-- ========================= -->
   <!-- INSTAGRAM -->
