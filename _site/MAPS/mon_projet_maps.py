@@ -8,7 +8,9 @@ arrivee = ("Oulan-Bator", 47.8864, 106.9057)
 trajet_coords = [
     (49.1193, 6.1757),    # Metz
     (45.8992, 6.1294),    # Annecy
-    (45.4642, 9.19),      # Milan
+    (45.4642, 9.1900),    # Milan
+    (45.4408, 12.3155),   # Venise
+    (45.8150, 15.9819),   # Zagreb
     (48.3069, 14.2858),   # Linz
     (44.4268, 26.1025),   # Bucarest
     (41.6771, 26.5555),   # Edirne
@@ -18,16 +20,14 @@ trajet_coords = [
     (43.6500, 51.2000),   # Aktau
     (41.2995, 69.2401),   # Tachkent
     (42.8746, 74.5698),   # Bichkek
-    (48.0000, 79.0000), 
+    (48.0000, 79.0000),
     (47.8864, 106.9057)   # Oulan-Bator
 ]
-
 # Carte centrée
 carte = folium.Map(
     location=[50, 50],
     zoom_start=3,
 )
-
 
 
 # Trajet bleu
