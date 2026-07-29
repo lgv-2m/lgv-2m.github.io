@@ -9,6 +9,21 @@ layout: post
 Retrouvez la première Pyvazette !
 
 
-<audio controls>
-  <source src="/assets/ici_lorraine_2026-06-09 at 19.40.10.mp4">
-</audio>
+<iframe
+    src="/assets/pyvazettes/PYVAZETTE1.pdf"
+    width="100%"
+    height="900"
+    style="border:none;">
+</iframe>
+
+<p>
+    <a href="/assets/pyvazettes/PYVAZETTE1.pdf" target="_blank">
+       Ouvrir le PDF dans un nouvel onglet
+    </a>
+    <br>
+    <br>
+    |
+    <a href="/assets/pyvazettes/PYVAZETTE1.pdf" download>
+        Télécharger le PDF
+    </a>
+</p>
