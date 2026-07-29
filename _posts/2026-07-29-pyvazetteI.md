@@ -20,8 +20,6 @@ Retrouvez la première Pyvazette !
     <a href="/assets/pyvazettes/PYVAZETTE1.pdf" target="_blank">
        Ouvrir le PDF dans un nouvel onglet
     </a>
-    <br>
-    <br>
     |
     <a href="/assets/pyvazettes/PYVAZETTE1.pdf" download>
         Télécharger le PDF
