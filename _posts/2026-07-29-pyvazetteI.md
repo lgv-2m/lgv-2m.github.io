@@ -8,17 +8,9 @@ layout: post
 
 Retrouvez la première Pyvazette !
 
-
-<iframe
-    src="/assets/pyvazettes/PYVAZETTE1.pdf"
-    width="100%"
-    height="900"
-    style="border:none;">
-</iframe>
-
 <p>
     <a href="/assets/pyvazettes/PYVAZETTE1.pdf" target="_blank">
-       Ouvrir le PDF dans un nouvel onglet
+       Ouvrir le PDF
     </a>
     |
     <a href="/assets/pyvazettes/PYVAZETTE1.pdf" download>
