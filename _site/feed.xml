@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-07-30T01:45:10+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Le Grand Voyage</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Retrouvez la première Pyvazette !</title><link href="http://localhost:4000/2026/07/29/pyvazetteI.html" rel="alternate" type="text/html" title="Retrouvez la première Pyvazette !" /><published>2026-07-29T00:00:00+02:00</published><updated>2026-07-29T00:00:00+02:00</updated><id>http://localhost:4000/2026/07/29/pyvazetteI</id><content type="html" xml:base="http://localhost:4000/2026/07/29/pyvazetteI.html"><![CDATA[<p>Retrouvez la première Pyvazette !</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-08-30T16:04:18+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Le Grand Voyage</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Retrouvez la deuxième Pyvazette !</title><link href="http://localhost:4000/2026/08/30/pyvazetteII.html" rel="alternate" type="text/html" title="Retrouvez la deuxième Pyvazette !" /><published>2026-08-30T00:00:00+02:00</published><updated>2026-08-30T00:00:00+02:00</updated><id>http://localhost:4000/2026/08/30/pyvazetteII</id><content type="html" xml:base="http://localhost:4000/2026/08/30/pyvazetteII.html"><![CDATA[<p>Retrouvez la deuxième Pyvazette !</p>
 
-<iframe src="/assets/pyvazettes/PYVAZETTE1.pdf" width="100%" height="900" style="border:none;">
-</iframe>
+<p>
+    <a href="/assets/pyvazettes/PYVAZETTE2.pdf" target="_blank">
+       Ouvrir le PDF
+    </a>
+    |
+    <a href="/assets/pyvazettes/PYVAZETTE2.pdf" download="">
+        Télécharger le PDF
+    </a>
+</p>]]></content><author><name></name></author><summary type="html"><![CDATA[De la Serbie à la Grèce ...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/pyvazette2_screen_shot.png" /><media:content medium="image" url="http://localhost:4000/assets/images/pyvazette2_screen_shot.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Retrouvez la première Pyvazette !</title><link href="http://localhost:4000/2026/07/29/pyvazetteI-copy.html" rel="alternate" type="text/html" title="Retrouvez la première Pyvazette !" /><published>2026-07-29T00:00:00+02:00</published><updated>2026-07-29T00:00:00+02:00</updated><id>http://localhost:4000/2026/07/29/pyvazetteI%20copy</id><content type="html" xml:base="http://localhost:4000/2026/07/29/pyvazetteI-copy.html"><![CDATA[<p>Retrouvez la première Pyvazette !</p>
 
 <p>
     <a href="/assets/pyvazettes/PYVAZETTE1.pdf" target="_blank">
-       Ouvrir le PDF dans un nouvel onglet
+       Ouvrir le PDF
     </a>
-    <br />
-    <br />
     |
     <a href="/assets/pyvazettes/PYVAZETTE1.pdf" download="">
         Télécharger le PDF
